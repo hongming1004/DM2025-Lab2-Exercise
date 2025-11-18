@@ -1,0 +1,353 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+First look review
+ This article is more than 9 years old
+Review
+Zootopia review – Disney&#x27;s furry fable gets its claws out for the bigots
+Predators and prey learn to get along in this animated tale of species
+coexistence – until a stray comment from the bunny-cop heroine turns
+the whole place into a hate-filled Trump rally
+Jordan Hoffman
+Thu 3 Mar 2016 15.32 GMT
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">An anthropomorphized hippopotamus in a business suit will always be welcome.</span> To that end, Disney’s Zootopia (Zootropolis in
+the UK, but Zoomania in Germany – make of these permutations what you will) has solid protection from criticism baked in.
+From enormous elephants to zippy voles, <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">all creatures great and small are dressed in funny outfits and, thanks to some very
+expensive computers, doing adorable things.</span> <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">A stoner yak voiced by Tommy Chong? <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">It takes a concentrated effort to not at least
+chuckle.</span></span> Luckily <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">there’s just enough of a story here <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">to keep the over-eight set engaged once the novelty wears off.</span></span>
+The world of Zootopia is one with no humans. All animals live together in basic tolerance. Predators have had the savagery bred
+out of them, so a lion can be near a sheep and everyone is chill. This isn’t to say there isn’t residual prejudice. “Just because he
+happened to be a fox” is a phrase a young Judy Hopps (Ginnifer Goodwin) reminds her provincial bunny parents when they bring
+up a touchy moment from her childhood.
+2025/11/18 晚上9:05
+Zootopia review – Disney&#x27;s furry fable gets its claws out for the bigots | Zootopia (aka Zootropolis) | The Guardian
+https://www.theguardian.com/film/2016/mar/03/zootopia-zootropolis-zoomania-review-disney
+1/4
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+Watch a trailer for Zootopia
+Judy is an idealist and, thanks to the mayor’s Mammal Inclusion Initiative, the first bunny to graduate from the police academy.
+Soon she’s zooming away from the farmlands to the gleaming city of Zootopia, where “anyone can be anything”, but she still
+needs to remind a well-meaning but microaggresive cheetah that “only a bunny can call another bunny cute”.
+The city itself is the best part of the picture, <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">a gorgeous melange of design elements</span>. Its center has a touch of Futurama, but
+there’s also Sahara Square, Tundratown, the Rainforest District and Little Rodentia. That last bit is <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">especially funny</span>, because
+when even tiny Judy Hopps is racing through it she looks like Godzilla stomping on Tokyo.
+Judy’s zealous nature gets her in trouble with the police chief (Idris Elba, voicing a giant water buffalo), but he <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">shouldn’t be
+selling her short</span> and sticking her with meter-maid duty. Naturally she’s the one that’s going to crack the case of the 14 missing
+mammals.
+Mayor Lionheart (JK Simmons) and Assistant Mayor Bellwether (Jenny Slate). Photograph: Disney/AP
+She doesn’t do it alone, though. She ensnares Nick Wilde, a <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">conniving sly fox</span> (voiced by Jason Bateman) to help her, and when
+they work together and overcome their bigotry, there are <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">life lessons blazing off the screen</span>. But here’s where Zootopia gets a little
+interesting. There’s a natural endpoint to the story when the bad guy gets captured, but there’s a twist. I wouldn’t normally get
+into such late-in-the-game story details, but there’s really not much else meriting discussion beyond hissing at the <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">painfully</span>
+Zootopia Official US Trailer #2
+Zootopia Official US Trailer #2
+2025/11/18 晚上9:05
+Zootopia review – Disney&#x27;s furry fable gets its claws out for the bigots | Zootopia (aka Zootropolis) | The Guardian
+https://www.theguardian.com/film/2016/mar/03/zootopia-zootropolis-zoomania-review-disney
+2/4
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+First look review
+
+
+Is This Thing On? review –
+Bradley Cooper’s comedy
+of comedians is a charmer
+11 Oct 2025
+Cover-Up review – Laura
+Poitras’s Seymour Hersh
+documentary is a thrilling
+ode to journalism
+9 Oct 2025
+Springsteen: Deliver Me
+from Nowhere review –
+solid biopic both embraces
+and avoids cliche
+30 Sept 2025
+Anemone review – Daniel
+Day-Lewis returns for a
+bleak and painfully serious
+misfire
+29 Sept 2025
+Eternity rev
+charming af
+concept love
+comedy
+12 Sept 2025
+More from Culture
+Film
+‘So weird, but cute’: Bridget
+Jones immortalised as
+Ticketing
+Reselling tickets for profit
+to be outlawed in UK
+Film
+‘I was born in a melting pot.
+Melting isn’t fun’: Jon M
+TV
+David Nicholls to adapt The
+Secret Diary of Adrian Mole
+How we made
+‘People still b
+their perfora
+<span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">drawn-out parody of The Godfather</span>, or applauding the <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">we’re-going-to-annoy-you humor</span> at the sloth-run Department of Mammal
+Vehicles.
+The missing mammals are being held because for some reason they have reverted to their savage states, and have committed
+unpredictable (PG-rated) atrocities. Judy says some <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">problematic things</span> during a press conference and, within moments, <span class="lx-highlight" data-idx="15" style="background-color:#D2E3FC;">the bliss
+of Zootopia’s utopia is shattered</span>. Soon society devolves into an enormous Trump rally, with an <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">unhelpful press corps</span> fanning the
+flames of <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">xenophobia and ignorance</span>.
+Judy Hopps with Nick Wilde, voiced by Jason Bateman, at the Department of Mammal Vehicles. Photograph: Disney/AP
+Woe be to anyone who tries to argue a one-to-one comparison between the predators v prey theme and any real-life controversy.
+It flashes on everything from typical rightwing radio cliches to general false-flag paranoia. It’s somewhat <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">heavy material for a film
+aimed at children</span>, but <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">perhaps very necessary</span> in an age where a beer-stained uncle might have ruined Thanksgiving wearing a
+Make America Great Again baseball cap.
+It’s still Disney, though, and it <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">concludes happily and without much nuance</span>. There’s ample space given for prey like Judy to
+apologize to unjustly accused predators (like her fox buddy), and for everyone to grow. It’s a good message, and one that will no
+doubt infuriate the right, who will say that Disney spent however many millions producing propaganda in favor of, for instance,
+the Iran deal – to pull one of a hundred different interpretations out of my ear. That this cute picture with funny giraffes and
+gazelles will be manipulated to further fuel hate is just all the more evidence that we haven’t yet fully evolved beyond our savage
+animal state.
+ Zootopia is released in the US on 4 March and as Zootropolis in the UK on 25 March.
+2025/11/18 晚上9:05
+Zootopia review – Disney&#x27;s furry fable gets its claws out for the bigots | Zootopia (aka Zootropolis) | The Guardian
+https://www.theguardian.com/film/2016/mar/03/zootopia-zootropolis-zoomania-review-disney
+3/4
+&quot;&quot;&quot;
+
+**Page 4**
+&quot;&quot;&quot;
+London welcomes statue of
+Britain’s favourite
+singleton
+19h ago
+government crackdown
+19h ago
+Chu on Wicked: For Good,
+Ariana Grande – and living
+the American dream
+20h ago
+Aged 13¾ for BBC
+19h ago
+how we mad
+ads
+22h ago
+View more comments
+Comments (45)
+This discussion is now closed for comments but you can still sign in or create your Guardian account to join the discussion next time
+1
+2
+Displaying threads 1 to 25 of 26
+31 Mar 2016 16.48
+4
+I have just seen this film and was <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">so impressed</span> that I had to write about it. The following contains spoilers!
+First off, I am <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">surprised how so many reviewers seem to be wilfully blind to its central message</span>: that <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">we all, both male and female, have our own
+strengths and weaknesses</span>, that <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">divisive and hate-filled &#x27;us and them&#x27; gender politics solve nothing</span> and instead we must recognise that <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">we need
+and compliment each other and should appreciate each other for what we are</span>
+Sort by
+Newest
+Per page
+25
+Display threads
+Collapsed
+SquidwardT
+Most viewed
+103
+2025/11/18 晚上9:05
+Zootopia review – Disney&#x27;s furry fable gets its claws out for the bigots | Zootopia (aka Zootropolis) | The Guardian
+https://www.theguardian.com/film/2016/mar/03/zootopia-zootropolis-zoomania-review-disney
+4/4
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="25" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/26</span> |
+          Pos <span id="posInfo">[379-455]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "An anthropomorphized hippopotamus in a business suit will always be welcome.", "color": "#C8E6C9", "startPos": 379, "endPos": 455, "beforeText": "tence \u2013 until a stray comment from the bunny-cop heroine turns\nthe whole place into a hate-filled Trump rally\nJordan Hoffman\nThu 3 Mar 2016 15.32 GMT\n", "extractionText": "An anthropomorphized hippopotamus in a business suit will always be welcome.", "afterText": " To that end, Disney\u2019s Zootopia (Zootropolis in\nthe UK, but Zoomania in Germany \u2013 make of these permutations what you will) has solid protection from ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">An anthropomorphized hippopotamus in a business suit</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">always be welcome</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "all creatures great and small are dressed in funny outfits and, thanks to some very expensive computers, doing adorable things.", "color": "#C8E6C9", "startPos": 665, "endPos": 792, "beforeText": "Zoomania in Germany \u2013 make of these permutations what you will) has solid protection from criticism baked in.\nFrom enormous elephants to zippy voles, ", "extractionText": "all creatures great and small are dressed in funny outfits and, thanks to some very\nexpensive computers, doing adorable things.", "afterText": " A stoner yak voiced by Tommy Chong? It takes a concentrated effort to not at least\nchuckle. Luckily there\u2019s just enough of a story here to keep the o", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">all creatures</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">adorable things</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "A stoner yak voiced by Tommy Chong? It takes a concentrated effort to not at least chuckle.", "color": "#C8E6C9", "startPos": 793, "endPos": 884, "beforeText": "hants to zippy voles, all creatures great and small are dressed in funny outfits and, thanks to some very\nexpensive computers, doing adorable things. ", "extractionText": "A stoner yak voiced by Tommy Chong? It takes a concentrated effort to not at least\nchuckle.", "afterText": " Luckily there\u2019s just enough of a story here to keep the over-eight set engaged once the novelty wears off.\nThe world of Zootopia is one with no human", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">A stoner yak voiced by Tommy Chong</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not at least chuckle</span>}</div>"}, {"index": 3, "class": "audience_impact", "text": "It takes a concentrated effort to not at least chuckle.", "color": "#D2E3FC", "startPos": 829, "endPos": 884, "beforeText": "great and small are dressed in funny outfits and, thanks to some very\nexpensive computers, doing adorable things. A stoner yak voiced by Tommy Chong? ", "extractionText": "It takes a concentrated effort to not at least\nchuckle.", "afterText": " Luckily there\u2019s just enough of a story here to keep the over-eight set engaged once the novelty wears off.\nThe world of Zootopia is one with no human", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">amusement</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">A stoner yak voiced by Tommy Chong</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "there\u2019s just enough of a story here to keep the over-eight set engaged once the novelty wears off.", "color": "#C8E6C9", "startPos": 893, "endPos": 991, "beforeText": " very\nexpensive computers, doing adorable things. A stoner yak voiced by Tommy Chong? It takes a concentrated effort to not at least\nchuckle. Luckily ", "extractionText": "there\u2019s just enough of a story here to keep the over-eight set engaged once the novelty wears off.", "afterText": "\nThe world of Zootopia is one with no humans. All animals live together in basic tolerance. Predators have had the savagery bred\nout of them, so a lio", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">enough to keep engaged</span>}</div>"}, {"index": 5, "class": "audience_impact", "text": "to keep the over-eight set engaged once the novelty wears off.", "color": "#D2E3FC", "startPos": 929, "endPos": 991, "beforeText": "rable things. A stoner yak voiced by Tommy Chong? It takes a concentrated effort to not at least\nchuckle. Luckily there\u2019s just enough of a story here ", "extractionText": "to keep the over-eight set engaged once the novelty wears off.", "afterText": "\nThe world of Zootopia is one with no humans. All animals live together in basic tolerance. Predators have had the savagery bred\nout of them, so a lio", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engaged</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">the story</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the over-eight set</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "a gorgeous melange of design elements", "color": "#C8E6C9", "startPos": 2102, "endPos": 2139, "beforeText": "to remind a well-meaning but microaggresive cheetah that \u201conly a bunny can call another bunny cute\u201d.\nThe city itself is the best part of the picture, ", "extractionText": "a gorgeous melange of design elements", "afterText": ". Its center has a touch of Futurama, but\nthere\u2019s also Sahara Square, Tundratown, the Rainforest District and Little Rodentia. That last bit is especi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The city</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">gorgeous melange of design elements</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "especially funny", "color": "#C8E6C9", "startPos": 2283, "endPos": 2299, "beforeText": "ements. Its center has a touch of Futurama, but\nthere\u2019s also Sahara Square, Tundratown, the Rainforest District and Little Rodentia. That last bit is ", "extractionText": "especially funny", "afterText": ", because\nwhen even tiny Judy Hopps is racing through it she looks like Godzilla stomping on Tokyo.\nJudy\u2019s zealous nature gets her in trouble with the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">That last bit</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">especially funny</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "shouldn\u2019t be selling her short", "color": "#C8E6C9", "startPos": 2515, "endPos": 2545, "beforeText": " like Godzilla stomping on Tokyo.\nJudy\u2019s zealous nature gets her in trouble with the police chief (Idris Elba, voicing a giant water buffalo), but he ", "extractionText": "shouldn\u2019t be\nselling her short", "afterText": " and sticking her with meter-maid duty. Naturally she\u2019s the one that\u2019s going to crack the case of the 14 missing\nmammals.\nMayor Lionheart (JK Simmons)", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the police chief</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">selling her short</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "conniving sly fox", "color": "#C8E6C9", "startPos": 2824, "endPos": 2841, "beforeText": "ionheart (JK Simmons) and Assistant Mayor Bellwether (Jenny Slate). Photograph: Disney/AP\nShe doesn\u2019t do it alone, though. She ensnares Nick Wilde, a ", "extractionText": "conniving sly fox", "afterText": " (voiced by Jason Bateman) to help her, and when\nthey work together and overcome their bigotry, there are life lessons blazing off the screen. But her", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Nick Wilde</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">conniving sly</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "life lessons blazing off the screen", "color": "#C8E6C9", "startPos": 2947, "endPos": 2982, "beforeText": "She ensnares Nick Wilde, a conniving sly fox (voiced by Jason Bateman) to help her, and when\nthey work together and overcome their bigotry, there are ", "extractionText": "life lessons blazing off the screen", "afterText": ". But here\u2019s where Zootopia gets a little\ninteresting. There\u2019s a natural endpoint to the story when the bad guy gets captured, but there\u2019s a twist. I ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">when they work together and overcome their bigotry</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">life lessons blazing</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "painfully", "color": "#C8E6C9", "startPos": 3271, "endPos": 3280, "beforeText": "a twist. I wouldn\u2019t normally get\ninto such late-in-the-game story details, but there\u2019s really not much else meriting discussion beyond hissing at the ", "extractionText": "painfully", "afterText": "\nZootopia Official US Trailer #2\nZootopia Official US Trailer #2\n2025/11/18 \u665a\u4e0a9:05\nZootopia review \u2013 Disney&#x27;s furry fable gets its claws out for the b", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">hissing</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">painfully</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "drawn-out parody of The Godfather", "color": "#C8E6C9", "startPos": 4364, "endPos": 4397, "beforeText": "born in a melting pot.\nMelting isn\u2019t fun\u2019: Jon M\nTV\nDavid Nicholls to adapt The\nSecret Diary of Adrian Mole\nHow we made\n\u2018People still b\ntheir perfora\n", "extractionText": "drawn-out parody of The Godfather", "afterText": ", or applauding the we\u2019re-going-to-annoy-you humor at the sloth-run Department of Mammal\nVehicles.\nThe missing mammals are being held because for some", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">drawn-out parody</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "we\u2019re-going-to-annoy-you humor", "color": "#C8E6C9", "startPos": 4417, "endPos": 4447, "beforeText": "avid Nicholls to adapt The\nSecret Diary of Adrian Mole\nHow we made\n\u2018People still b\ntheir perfora\ndrawn-out parody of The Godfather, or applauding the ", "extractionText": "we\u2019re-going-to-annoy-you humor", "afterText": " at the sloth-run Department of Mammal\nVehicles.\nThe missing mammals are being held because for some reason they have reverted to their savage states,", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The humor</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">we\u2019re-going-to-annoy-you</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "problematic things", "color": "#C8E6C9", "startPos": 4669, "endPos": 4687, "beforeText": " being held because for some reason they have reverted to their savage states, and have committed\nunpredictable (PG-rated) atrocities. Judy says some ", "extractionText": "problematic things", "afterText": " during a press conference and, within moments, the bliss\nof Zootopia\u2019s utopia is shattered. Soon society devolves into an enormous Trump rally, with ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Judy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">problematic</span>}</div>"}, {"index": 15, "class": "audience_impact", "text": "the bliss of Zootopia\u2019s utopia is shattered", "color": "#D2E3FC", "startPos": 4735, "endPos": 4778, "beforeText": "vage states, and have committed\nunpredictable (PG-rated) atrocities. Judy says some problematic things during a press conference and, within moments, ", "extractionText": "the bliss\nof Zootopia\u2019s utopia is shattered", "afterText": ". Soon society devolves into an enormous Trump rally, with an unhelpful press corps fanning the\nflames of xenophobia and ignorance.\nJudy Hopps with Ni", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">shock, disappointment</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Judy says some problematic things during a press conference</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "unhelpful press corps", "color": "#C8E6C9", "startPos": 4840, "endPos": 4861, "beforeText": "ring a press conference and, within moments, the bliss\nof Zootopia\u2019s utopia is shattered. Soon society devolves into an enormous Trump rally, with an ", "extractionText": "unhelpful press corps", "afterText": " fanning the\nflames of xenophobia and ignorance.\nJudy Hopps with Nick Wilde, voiced by Jason Bateman, at the Department of Mammal Vehicles. Photograph", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The press corps</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unhelpful</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "xenophobia and ignorance", "color": "#C8E6C9", "startPos": 4884, "endPos": 4908, "beforeText": " the bliss\nof Zootopia\u2019s utopia is shattered. Soon society devolves into an enormous Trump rally, with an unhelpful press corps fanning the\nflames of ", "extractionText": "xenophobia and ignorance", "afterText": ".\nJudy Hopps with Nick Wilde, voiced by Jason Bateman, at the Department of Mammal Vehicles. Photograph: Disney/AP\nWoe be to anyone who tries to argue", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The press corps</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">xenophobia and ignorance</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "heavy material for a film aimed at children", "color": "#C8E6C9", "startPos": 5257, "endPos": 5300, "beforeText": "prey theme and any real-life controversy.\nIt flashes on everything from typical rightwing radio cliches to general false-flag paranoia. It\u2019s somewhat ", "extractionText": "heavy material for a film\naimed at children", "afterText": ", but perhaps very necessary in an age where a beer-stained uncle might have ruined Thanksgiving wearing a\nMake America Great Again baseball cap.\nIt\u2019s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The material</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">heavy material</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "perhaps very necessary", "color": "#C8E6C9", "startPos": 5306, "endPos": 5328, "beforeText": "hes on everything from typical rightwing radio cliches to general false-flag paranoia. It\u2019s somewhat heavy material for a film\naimed at children, but ", "extractionText": "perhaps very necessary", "afterText": " in an age where a beer-stained uncle might have ruined Thanksgiving wearing a\nMake America Great Again baseball cap.\nIt\u2019s still Disney, though, and i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The material</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">very necessary</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "concludes happily and without much nuance", "color": "#C8E6C9", "startPos": 5480, "endPos": 5521, "beforeText": "n an age where a beer-stained uncle might have ruined Thanksgiving wearing a\nMake America Great Again baseball cap.\nIt\u2019s still Disney, though, and it ", "extractionText": "concludes happily and without much nuance", "afterText": ". There\u2019s ample space given for prey like Judy to\napologize to unjustly accused predators (like her fox buddy), and for everyone to grow. It\u2019s a good ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">happily and without much nuance</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "so impressed", "color": "#C8E6C9", "startPos": 6916, "endPos": 6928, "beforeText": "te your Guardian account to join the discussion next time\n1\n2\nDisplaying threads 1 to 25 of 26\n31 Mar 2016 16.48\n4\nI have just seen this film and was ", "extractionText": "so impressed", "afterText": " that I had to write about it. The following contains spoilers!\nFirst off, I am surprised how so many reviewers seem to be wilfully blind to its centr", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so impressed</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "surprised how so many reviewers seem to be wilfully blind to its central message", "color": "#C8E6C9", "startPos": 7008, "endPos": 7088, "beforeText": "26\n31 Mar 2016 16.48\n4\nI have just seen this film and was so impressed that I had to write about it. The following contains spoilers!\nFirst off, I am ", "extractionText": "surprised how so many reviewers seem to be wilfully blind to its central message", "afterText": ": that we all, both male and female, have our own\nstrengths and weaknesses, that divisive and hate-filled &#x27;us and them&#x27; gender politics solve nothing ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The central message</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">wilfully blind</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "we all, both male and female, have our own strengths and weaknesses", "color": "#C8E6C9", "startPos": 7095, "endPos": 7162, "beforeText": "ite about it. The following contains spoilers!\nFirst off, I am surprised how so many reviewers seem to be wilfully blind to its central message: that ", "extractionText": "we all, both male and female, have our own\nstrengths and weaknesses", "afterText": ", that divisive and hate-filled &#x27;us and them&#x27; gender politics solve nothing and instead we must recognise that we need\nand compliment each other and s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The central message</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">strengths and weaknesses</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "divisive and hate-filled 'us and them' gender politics solve nothing", "color": "#C8E6C9", "startPos": 7169, "endPos": 7237, "beforeText": "ow so many reviewers seem to be wilfully blind to its central message: that we all, both male and female, have our own\nstrengths and weaknesses, that ", "extractionText": "divisive and hate-filled &#x27;us and them&#x27; gender politics solve nothing", "afterText": " and instead we must recognise that we need\nand compliment each other and should appreciate each other for what we are\nSort by\nNewest\nPer page\n25\nDisp", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Divisive and hate-filled &#x27;us and them&#x27; gender politics</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">solve nothing</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "we need and compliment each other and should appreciate each other for what we are", "color": "#C8E6C9", "startPos": 7273, "endPos": 7355, "beforeText": ", have our own\nstrengths and weaknesses, that divisive and hate-filled &#x27;us and them&#x27; gender politics solve nothing and instead we must recognise that ", "extractionText": "we need\nand compliment each other and should appreciate each other for what we are", "afterText": "\nSort by\nNewest\nPer page\n25\nDisplay threads\nCollapsed\nSquidwardT\nMost viewed\n103\n2025/11/18 \u665a\u4e0a9:05\nZootopia review \u2013 Disney&#x27;s furry fable gets its cla", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">We</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">need and compliment each other</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
